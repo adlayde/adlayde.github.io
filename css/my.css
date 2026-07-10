@@ -1,1 +1,440 @@
-/* Here is your custom css styles. */
+/* ==============================================
+   Soft Pink Theme Override for hexo-theme-matery
+   Place at: themes/hexo-theme-matery/source/css/my.css
+   ============================================== */
+
+/* ===== Light Mode - Softer Pink ===== */
+
+/* Blockquote */
+blockquote {
+    border-left: 5px solid #f0a0b0 !important;
+    background-color: rgba(240, 160, 176, 0.06) !important;
+}
+
+/* Navigation / Banner gradient */
+.bg-color {
+    background-image: linear-gradient(to right, rgba(255, 182, 193, 0.85) 0%, rgba(210, 160, 180, 0.75) 100%) !important;
+    opacity: 0.8;
+}
+
+/* Banner text */
+.text-color {
+    color: #fff !important;
+}
+
+/* Progress bar */
+.progress-bar {
+    background: linear-gradient(to right, #f8c4cf 0%, #e8a0b0 100%) !important;
+}
+
+/* Article list links */
+article a:hover {
+    color: #e89aaa !important;
+}
+
+/* Tags chip */
+#artDetail .tag_share .article-tag .chip {
+    color: #e89aaa !important;
+}
+#artDetail .tag_share .article-tag .chip:hover {
+    background: #f0a0b0 !important;
+    color: #fff !important;
+}
+
+/* Category / Post info */
+#artDetail .post-cate,
+#artDetail .post-cate a {
+    color: #e89aaa !important;
+}
+#artDetail .post-info .post-category:hover {
+    color: #e89aaa !important;
+}
+
+/* Reprint links */
+#artDetail .reprint a {
+    color: #e89aaa !important;
+}
+
+/* Article content links */
+#articleContent a {
+    color: #e89aaa !important;
+}
+#articleContent a:hover {
+    color: #d4889a !important;
+}
+
+/* Tags page chip hover */
+.chip-container .chip:hover {
+    background: linear-gradient(to right, #f8c4cf 0%, #e8a0b0 100%) !important;
+    color: #fff !important;
+    border-color: transparent !important;
+}
+
+/* Timeline */
+#cd-timeline::before {
+    background: #f8c4cf !important;
+}
+
+/* Sidebar statistics */
+.post-statis .statis .count a {
+    color: #e89aaa !important;
+}
+
+/* About page social links */
+#aboutme .social-link a {
+    border: 1px solid #f8c4cf !important;
+    background: radial-gradient(#ffe0e6, #f0a0b0) !important;
+}
+
+/* Skills chip hover */
+.other-skills .chip:hover {
+    background: linear-gradient(to right, #f8c4cf 0%, #e8a0b0 100%) !important;
+    border: 1px solid #f8c4cf !important;
+    color: #fff !important;
+}
+
+/* Search results */
+.search-result-list .search-result-title {
+    color: #e89aaa !important;
+}
+
+/* TOC */
+#toc-content .toc-link:hover {
+    color: #e89aaa !important;
+}
+#toc-content .is-active-link {
+    color: #e89aaa !important;
+    border-left-color: #e89aaa !important;
+}
+#toc-content .toc-link.active {
+    color: #e89aaa !important;
+}
+
+/* Comment links (Gitment/Gitalk/Waline/Valine/Twikoo) */
+.gitment-markdown a,
+.markdown-body a {
+    color: #e89aaa !important;
+}
+.gitment-markdown blockquote,
+.markdown-body blockquote {
+    border-left: 5px solid #f0a0b0 !important;
+    background-color: rgba(240, 160, 176, 0.06) !important;
+}
+
+#gitalk-container .gt-no-init a,
+#gitalk-container .gt-container .gt-link,
+#gitalk-container .gt-container .gt-header-controls-tip,
+#gitalk-container a,
+#gitalk-container .gt-comment-username {
+    color: #e89aaa !important;
+}
+#gitalk-container .gt-container .gt-svg svg {
+    fill: #e89aaa !important;
+}
+
+#vcomments a,
+#waline a,
+#tcomments a {
+    color: #f0a0b0 !important;
+}
+#vcomments blockquote,
+#waline blockquote,
+#tcomments blockquote {
+    border-left: 5px solid #f0a0b0 !important;
+    background-color: rgba(240, 160, 176, 0.06) !important;
+}
+
+/* GitHub corner */
+.github-corner svg {
+    color: #f0a0b0 !important;
+}
+
+/* Fork me */
+.github-link a {
+    background-color: #f0a0b0 !important;
+}
+
+/* Nav hover */
+.nav-menu .nav-item a:hover,
+.nav-menu .nav-item a.active {
+    color: #e89aaa !important;
+}
+
+/* Mobile nav */
+#mobile-nav li a:hover {
+    color: #e89aaa !important;
+}
+
+/* Share buttons */
+.social-share a:hover {
+    color: #e89aaa !important;
+}
+
+/* Pagination */
+.pagination li.active a,
+.pagination li a:hover {
+    background-color: #f0a0b0 !important;
+}
+
+/* Music player */
+.aplayer {
+    color: #e89aaa !important;
+}
+
+/* Post calendar */
+#post-calendar .cal-head {
+    background: linear-gradient(to right, #f8c4cf, #e8a0b0) !important;
+}
+#post-calendar .cal-today {
+    background: #f0a0b0 !important;
+    color: #fff !important;
+}
+
+/* Categories page */
+.categories-card .card-content .category-item:hover {
+    color: #e89aaa !important;
+}
+
+/* Tag cloud */
+#tag-cloud .tag-cloud-title {
+    color: #e89aaa !important;
+}
+
+/* Archive year */
+.archive-year {
+    color: #e89aaa !important;
+}
+
+/* General links */
+a:hover {
+    color: #e89aaa !important;
+}
+
+/* Copyright & reward */
+.copyright-info a:hover {
+    color: #f0a0b0 !important;
+}
+
+/* Back to top */
+.top-scroll .btn-floating {
+    background: linear-gradient(to bottom right, #f8c4cf 0%, #e8a0b0 100%) !important;
+}
+
+/* Friends card hover */
+.friends-container .friend-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(240, 160, 176, 0.12) !important;
+}
+
+/* Contact page */
+#contact .chip:hover {
+    background: linear-gradient(to right, #f8c4cf 0%, #e8a0b0 100%) !important;
+    color: #fff !important;
+}
+
+
+/* ===== Dark Mode - Subtle Warm Pink ===== */
+
+/* Dark body */
+body.DarkMode {
+    background-color: #1a1520 !important;
+}
+
+/* Dark blockquote */
+body.DarkMode blockquote {
+    border-left: 5px solid rgba(240, 160, 176, 0.35) !important;
+    background-color: rgba(240, 160, 176, 0.04) !important;
+}
+
+/* Dark nav/banner - translucent overlay */
+body.DarkMode .bg-color {
+    background-image: linear-gradient(to right, rgba(255, 182, 193, 0.2) 0%, rgba(200, 160, 180, 0.18) 100%) !important;
+    background-color: #1a1520 !important;
+}
+
+/* Dark progress bar */
+body.DarkMode .progress-bar {
+    background: linear-gradient(to right, rgba(248, 196, 207, 0.35) 0%, rgba(200, 160, 200, 0.3) 100%) !important;
+}
+
+/* Dark links */
+body.DarkMode a:hover {
+    color: #f0a0b0 !important;
+}
+body.DarkMode article a:hover {
+    color: #f0a0b0 !important;
+}
+body.DarkMode #articleContent a {
+    color: #f0a0b0 !important;
+}
+body.DarkMode #articleContent a:hover {
+    color: #f8c4cf !important;
+}
+
+/* Dark TOC */
+body.DarkMode #toc-content .toc-link:hover {
+    color: #f0a0b0 !important;
+}
+body.DarkMode #toc-content .is-active-link {
+    color: #f0a0b0 !important;
+    border-left-color: #f0a0b0 !important;
+}
+
+/* Dark chips/tags */
+body.DarkMode .chip-container .chip:hover {
+    background: linear-gradient(to right, rgba(248, 196, 207, 0.2) 0%, rgba(200, 160, 200, 0.18) 100%) !important;
+    color: #f8c4cf !important;
+    border-color: rgba(240, 160, 176, 0.2) !important;
+}
+body.DarkMode #artDetail .tag_share .article-tag .chip {
+    color: #f0a0b0 !important;
+}
+body.DarkMode #artDetail .tag_share .article-tag .chip:hover {
+    background: rgba(240, 160, 176, 0.15) !important;
+    color: #f8c4cf !important;
+}
+
+/* Dark category */
+body.DarkMode #artDetail .post-cate,
+body.DarkMode #artDetail .post-cate a {
+    color: #f0a0b0 !important;
+}
+
+/* Dark search */
+body.DarkMode .search-result-list .search-result-title {
+    color: #f0a0b0 !important;
+}
+
+/* Dark timeline */
+body.DarkMode #cd-timeline::before {
+    background: rgba(248, 196, 207, 0.25) !important;
+}
+
+/* Dark sidebar */
+body.DarkMode .post-statis .statis .count a {
+    color: #f0a0b0 !important;
+}
+
+/* Dark about */
+body.DarkMode #aboutme .social-link a {
+    border: 1px solid rgba(240, 160, 176, 0.2) !important;
+    background: radial-gradient(rgba(248, 196, 207, 0.12), rgba(200, 160, 200, 0.1)) !important;
+}
+
+/* Dark skills */
+body.DarkMode .other-skills .chip:hover {
+    background: linear-gradient(to right, rgba(248, 196, 207, 0.2) 0%, rgba(200, 160, 200, 0.18) 100%) !important;
+    border: 1px solid rgba(240, 160, 176, 0.2) !important;
+}
+
+/* Dark comments */
+body.DarkMode .gitment-markdown a,
+body.DarkMode .markdown-body a {
+    color: #f0a0b0 !important;
+}
+body.DarkMode .gitment-markdown blockquote,
+body.DarkMode .markdown-body blockquote {
+    border-left: 5px solid rgba(240, 160, 176, 0.3) !important;
+    background-color: rgba(240, 160, 176, 0.03) !important;
+}
+
+body.DarkMode #gitalk-container .gt-no-init a,
+body.DarkMode #gitalk-container .gt-container .gt-link,
+body.DarkMode #gitalk-container .gt-container .gt-header-controls-tip,
+body.DarkMode #gitalk-container a {
+    color: #f0a0b0 !important;
+}
+body.DarkMode #gitalk-container .gt-container .gt-svg svg {
+    fill: #f0a0b0 !important;
+}
+
+body.DarkMode #vcomments a,
+body.DarkMode #vcomments blockquote,
+body.DarkMode #waline a,
+body.DarkMode #waline blockquote,
+body.DarkMode #tcomments a,
+body.DarkMode #tcomments blockquote {
+    color: #f0a0b0 !important;
+    border-left-color: rgba(240, 160, 176, 0.3) !important;
+    background-color: rgba(240, 160, 176, 0.03) !important;
+}
+
+/* Dark music player */
+body.DarkMode .aplayer {
+    color: #f0a0b0 !important;
+}
+body.DarkMode .aplayer .aplayer-list ol li:hover {
+    color: #f0a0b0 !important;
+}
+
+/* Dark nav */
+body.DarkMode .nav-menu .nav-item a:hover {
+    color: #f0a0b0 !important;
+}
+
+/* Dark back to top */
+body.DarkMode .top-scroll .btn-floating {
+    background: linear-gradient(to bottom right, rgba(248, 196, 207, 0.35) 0%, rgba(200, 160, 200, 0.3) 100%) !important;
+}
+
+/* Dark copyright */
+body.DarkMode .copyright-info a:hover {
+    color: #f0a0b0 !important;
+}
+
+/* Dark pagination */
+body.DarkMode .pagination li.active a,
+body.DarkMode .pagination li a:hover {
+    background-color: rgba(240, 160, 176, 0.2) !important;
+    color: #f8c4cf !important;
+}
+
+/* Dark post calendar */
+body.DarkMode #post-calendar .cal-head {
+    background: linear-gradient(to right, rgba(248, 196, 207, 0.3), rgba(200, 160, 200, 0.25)) !important;
+}
+body.DarkMode #post-calendar .cal-today {
+    background: rgba(240, 160, 176, 0.25) !important;
+    color: #f8c4cf !important;
+}
+
+/* Dark GitHub corner */
+body.DarkMode .github-corner svg {
+    color: #f0a0b0 !important;
+}
+
+/* Dark archive year */
+body.DarkMode .archive-year {
+    color: #f0a0b0 !important;
+}
+
+/* Dark categories */
+body.DarkMode .categories-card .card-content .category-item:hover {
+    color: #f0a0b0 !important;
+}
+
+/* Dark contact */
+body.DarkMode #contact .chip:hover {
+    background: linear-gradient(to right, rgba(248, 196, 207, 0.2) 0%, rgba(200, 160, 200, 0.18) 100%) !important;
+    color: #f8c4cf !important;
+}
+
+/* Dark friends hover */
+body.DarkMode .friends-container .friend-card:hover {
+    box-shadow: 0 8px 24px rgba(240, 160, 176, 0.06) !important;
+}
+
+/* Dark reprint */
+body.DarkMode #artDetail .reprint a {
+    color: #f0a0b0 !important;
+}
+
+/* Dark banner text */
+body.DarkMode .text-color {
+    color: #fff !important;
+}
+
+/* Dark share */
+body.DarkMode .social-share a:hover {
+    color: #f0a0b0 !important;
+}
