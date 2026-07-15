@@ -67,6 +67,11 @@
 
 
 <body>
+    <!-- 页面加载动画遮罩 -->
+    <div id="page-loader">
+        <img class="loader-gif" src="/medias/loader/loading.svg" alt="Loading">
+    </div>
+
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
@@ -519,8 +524,7 @@
                         <a href="/2025/03/14/first-blog/">
                             <div class="card-image">
                                 
-                                
-                                <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="first blog">
+                                <img src="/medias/post/first_blog.jpg" class="responsive-img" alt="first blog">
                                 
                                 <span class="card-title">first blog</span>
                             </div>
@@ -539,8 +543,12 @@ using nam
                                 </span>
                                 <span class="publish-author">
                                     
-                                    <i class="fas fa-user fa-fw"></i>
-                                    Adlayde
+                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                    
+                                    <a href="/categories/%E6%9D%82%E8%AE%B0/" class="post-category">
+                                    杂记
+                                    </a>
+                                    
                                     
                                 </span>
                             </div>
@@ -570,8 +578,7 @@ using nam
                         <a href="/2025/03/14/hello-world/">
                             <div class="card-image">
                                 
-                                
-                                <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                                <img src="/medias/post/hello_world.jpg" class="responsive-img" alt="Hello World">
                                 
                                 <span class="card-title">Hello World</span>
                             </div>
@@ -588,8 +595,12 @@ using nam
                                 </span>
                                 <span class="publish-author">
                                     
-                                    <i class="fas fa-user fa-fw"></i>
-                                    Adlayde
+                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                    
+                                    <a href="/categories/%E6%9D%82%E8%AE%B0/" class="post-category">
+                                    杂记
+                                    </a>
+                                    
                                     
                                 </span>
                             </div>
@@ -946,8 +957,37 @@ $(function () {
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
-    
-        
+
+    <!-- 页面加载动画控制脚本 -->
+    <script>
+        (function() {
+            var loader = document.getElementById('page-loader');
+            
+            window.addEventListener('load', function() {
+                setTimeout(function() {
+                    if (loader) {
+                        loader.classList.add('loader-hidden');
+                        setTimeout(function() {
+                            if (loader.parentNode) {
+                                loader.parentNode.removeChild(loader);
+                            }
+                        }, 500);
+                    }
+                }, 300);
+            });
+
+            setTimeout(function() {
+                if (loader && !loader.classList.contains('loader-hidden')) {
+                    loader.classList.add('loader-hidden');
+                    setTimeout(function() {
+                        if (loader.parentNode) {
+                            loader.parentNode.removeChild(loader);
+                        }
+                    }, 500);
+                }
+            }, 5000);
+        })();
+    </script>
 
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"left","width":265,"height":500,"hOffset":0,"vOffset":-150},"mobile":{"show":false},"react":{"opacity":1},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
