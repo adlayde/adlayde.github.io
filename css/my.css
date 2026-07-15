@@ -955,5 +955,11 @@ body::before {
     }
 }
 
+/* 手机端强制隐藏 Live2D 看板娘 */
+@media screen and (max-width: 768px) {
+    #live2d-widget {
+        display: none !important;
+    }
+}
 
 
