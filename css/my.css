@@ -176,9 +176,268 @@ article a:hover {
     background-color: #7986CB !important;
 }
 
-/* Music player */
-.aplayer {
-    color: #7986CB !important;
+/* ==================== Music Card - 淡粉色主题 ==================== */
+
+/* ===== 1. 音乐卡片容器（与 Dream 一致大小）===== */
+.music-card {
+    position: relative !important;
+    margin-top: 30px !important;
+    margin-bottom: 50px !important;
+    padding: 40px 35px !important;
+
+    background: linear-gradient(135deg, 
+        rgba(255, 248, 245, 0.95) 0%,
+        rgba(252, 240, 250, 0.92) 40%,
+        rgba(250, 235, 245, 0.95) 70%,
+        rgba(248, 230, 248, 0.93) 100%
+    ) !important;
+
+    border-radius: 20px !important;
+    box-shadow: 
+        0 10px 35px rgba(240, 128, 180, 0.15),
+        0 4px 12px rgba(255, 182, 193, 0.1),
+        0 2px 4px rgba(0, 0, 0, 0.04) !important;
+
+    border: 2px solid transparent;
+    background-image: 
+        linear-gradient(rgba(255, 252, 250, 0.96), rgba(255, 252, 250, 0.96)),
+        linear-gradient(135deg, #F8BBD9, #F48FB1, #F06292);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+
+    display: block !important;
+    width: auto !important;
+    text-align: center !important;
+    overflow: visible !important;
+    transition: all 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+}
+
+.music-card:hover {
+    transform: translateY(-6px) scale(1.01) !important;
+    box-shadow: 
+        0 22px 55px rgba(240, 128, 180, 0.22),
+        0 10px 28px rgba(255, 182, 193, 0.16),
+        0 5px 10px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* ===== 2. 标题 - 与 Dream 一致 ===== */
+.music-title {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 14px !important;
+    margin-bottom: 30px !important;
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    color: #C2185B !important;
+    position: relative;
+    z-index: 3 !important;
+}
+
+.music-title span {
+    background: linear-gradient(90deg, 
+        #E91E63 0%, 
+        #EC407A 30%, 
+        #F06292 60%, 
+        #D81B60 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: musicTitleFlow 5s ease-in-out infinite alternate;
+}
+
+@keyframes musicTitleFlow {
+    from { background-position: 0% center; }
+    to { background-position: 200% center; }
+}
+
+/* ===== 3. 装饰元素 ===== */
+.music-deco {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.music-star {
+    position: absolute;
+    color: rgba(233, 30, 99, 0.12);
+    font-size: 20px;
+    animation: starTwinkle 3s ease-in-out infinite;
+}
+.music-star.s1 { top: 18px; right: 25px; }
+
+.music-petal {
+    position: absolute;
+    font-size: 18px;
+    opacity: 0.7;
+    animation: petalFloat 8s ease-in-out infinite;
+}
+.music-petal.p1 { top: 35%; right: 15px; animation-delay: 0s; }
+.music-petal.p2 { bottom: 25%; left: 20px; animation-delay: 3s; }
+
+.music-note {
+    position: absolute;
+    font-size: 26px;
+    color: rgba(233, 30, 99, 0.1);
+    animation: noteSwing 5s ease-in-out infinite;
+}
+.music-note.n1 { top: 20%; left: 30px; animation-delay: 1s; }
+.music-note.n2 { bottom: 30%; right: 35px; animation-delay: 2.5s; font-size: 22px; }
+
+@keyframes starTwinkle {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.2); }
+}
+
+@keyframes petalFloat {
+    0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.5; }
+    33% { transform: translateY(-12px) rotate(8deg); opacity: 0.85; }
+    66% { transform: translateY(-6px) rotate(-5deg); opacity: 0.65; }
+}
+
+@keyframes noteSwing {
+    0%, 100% { transform: translateY(0) rotate(-8deg); opacity: 0.4; }
+    50% { transform: translateY(-18px) rotate(12deg); opacity: 0.9; }
+}
+
+/* ===== 4. 内容区域 ===== */
+.music-content {
+    position: relative;
+    z-index: 2;
+    padding: 10px 0;
+}
+
+/* ===== 5. APlayer 美化 ===== */
+.music-card .aplayer {
+    border-radius: 14px !important;
+    box-shadow: 
+        0 6px 24px rgba(233, 30, 99, 0.1),
+        0 2px 6px rgba(0, 0, 0, 0.05) !important;
+    background: rgba(255, 255, 255, 0.88) !important;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.music-card .aplayer:hover {
+    box-shadow: 
+        0 12px 36px rgba(233, 30, 99, 0.16),
+        0 4px 12px rgba(0, 0, 0, 0.08) !important;
+}
+
+.music-card .aplayer .aplayer-pic {
+    border-radius: 12px 0 0 12px !important;
+}
+
+.music-card .aplayer .aplayer-info .aplayer-music {
+    color: #C2185B !important;
+    font-weight: 600;
+}
+
+.music-card .aplayer .aplayer-info .aplayer-author,
+.music-card .aplayer .aplayer-info .aplayer-controller .aplayer-time {
+    color: #888;
+}
+
+.music-card .aplayer .aplayer-info .aplayer-controller .aplayer-icon {
+    color: #E91E63;
+    transition: all 0.25s ease;
+}
+
+.music-card .aplayer .aplayer-info .aplayer-controller .aplayer-icon:hover {
+    color: #AD1457;
+    transform: scale(1.2);
+}
+
+.music-card .aplayer .aplayer-bar-wrap .aplayer-bar .aplayer-played {
+    background: linear-gradient(to right, #E91E63, #F06292) !important;
+}
+
+.music-card .aplayer .aplayer-bar-wrap .aplayer-bar .aplayer-played .aplayer-thumb {
+    background: #E91E63 !important;
+    box-shadow: 0 0 10px rgba(233, 30, 99, 0.5);
+}
+
+.music-card .aplayer .aplayer-volume-wrap .aplayer-volume-bar .aplayer-volume {
+    background: linear-gradient(to right, #E91E63, #F06292) !important;
+}
+
+.music-card .aplayer .aplayer-volume-wrap .aplayer-volume-bar .aplayer-volume .aplayer-thumb {
+    background: #E91E63 !important;
+}
+
+.music-card .aplayer .aplayer-list {
+    background: rgba(255, 245, 248, 0.95) !important;
+    border-top: 1px solid rgba(233, 30, 99, 0.08) !important;
+}
+
+.music-card .aplayer .aplayer-list ol {
+    padding-left: 12px !important;
+    margin: 0 !important;
+}
+
+.music-card .aplayer .aplayer-list ol li {
+    text-align: left !important;
+    padding-left: 10px !important;
+    margin: 2px 0 !important;
+}
+
+.music-card .aplayer .aplayer-list ol li:hover {
+    background-color: rgba(233, 30, 99, 0.07) !important;
+}
+
+.music-card .aplayer .aplayer-list ol li.aplayer-list-light {
+    background: rgba(233, 30, 99, 0.11) !important;
+}
+
+.music-card .aplayer .aplayer-list ol li.aplayer-list-light .aplayer-list-cur {
+    color: #E91E63 !important;
+}
+
+/* ===== 6. 底部装饰线 ===== */
+.music-line {
+    width: 70px;
+    height: 3px;
+    margin: 28px auto 0;
+    background: linear-gradient(to right, #F48FB1, #F06292, #EC407A);
+    border-radius: 2px;
+    position: relative;
+    z-index: 2;
+}
+
+/* ===== 7. 移动端适配 ===== */
+@media (max-width: 768px) {
+    .music-card {
+        padding: 30px 20px !important;
+        margin: 20px 8px !important;
+        border-radius: 16px !important;
+    }
+
+    .music-title {
+        font-size: 1.65rem !important;
+        gap: 10px !important;
+        flex-wrap: wrap;
+    }
+
+    .music-title img {
+        width: 46px !important;
+        height: 46px !important;
+    }
+
+    .music-star { font-size: 16px; top: 12px; right: 12px; }
+    .music-petal { font-size: 14px; }
+    .music-petal.p1 { right: 8px; }
+    .music-petal.p2 { left: 10px; }
+    .music-note { font-size: 20px; }
+    .music-note.n1 { left: 12px; }
+    .music-note.n2 { right: 15px; font-size: 17px; }
+
+    .music-card .aplayer {
+        border-radius: 12px !important;
+    }
 }
 
 /* Post calendar */
@@ -359,12 +618,70 @@ body.DarkMode #tcomments blockquote {
     background-color: rgba(121, 134, 203, 0.03) !important;
 }
 
-/* Dark music player */
-body.DarkMode .aplayer {
-    color: #7986CB !important;
+/* Dark music */
+/* ===== 8. 深色模式 ===== */
+body.DarkMode .music-card {
+    background: linear-gradient(135deg, 
+        rgba(42, 32, 38, 0.95) 0%,
+        rgba(38, 28, 34, 0.93) 40%,
+        rgba(44, 32, 40, 0.95) 70%,
+        rgba(40, 30, 36, 0.94) 100%
+    ) !important;
+    box-shadow: 
+        0 10px 35px rgba(0, 0, 0, 0.4),
+        0 4px 12px rgba(0, 0, 0, 0.25) !important;
+    background-image: 
+        linear-gradient(rgba(35, 28, 32, 0.96), rgba(35, 28, 32, 0.96)),
+        linear-gradient(135deg, #C2185B, #AD1457, #880E4F);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
 }
-body.DarkMode .aplayer .aplayer-list ol li:hover {
-    color: #7986CB !important;
+
+body.DarkMode .music-card:hover {
+    box-shadow: 
+        0 22px 55px rgba(0, 0, 0, 0.5),
+        0 10px 28px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.DarkMode .music-title span {
+    background: linear-gradient(90deg, #F48FB1, #F06292, #EC407A);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body.DarkMode .music-card .aplayer {
+    background: rgba(42, 35, 40, 0.9) !important;
+}
+
+body.DarkMode .music-card .aplayer .aplayer-list {
+    background: rgba(38, 30, 35, 0.95);
+}
+
+body.DarkMode .music-card .aplayer .aplayer-info .aplayer-music {
+    color: #F48FB1 !important;
+}
+
+body.DarkMode .music-card .aplayer .aplayer-info .aplayer-controller .aplayer-time {
+    color: #aaa;
+}
+
+body.DarkMode .music-card .aplayer .aplayer-list ol li:hover {
+    color: #F48FB1 !important;
+    background-color: rgba(244, 143, 177, 0.1);
+}
+
+body.DarkMode .music-card .aplayer .aplayer-list ol li.aplayer-list-light {
+    background: rgba(244, 143, 177, 0.13);
+}
+
+body.DarkMode .music-star { color: rgba(244, 143, 177, 0.15); }
+body.DarkMode .music-petal { opacity: 0.4; }
+body.DarkMode .music-note { color: rgba(244, 143, 177, 0.08); }
+
+body.DarkMode .music-line {
+    background: linear-gradient(to right, #AD1457, #C2185B, #E91E63);
 }
 
 /* Dark nav */
@@ -1109,3 +1426,4 @@ body::before {
 body.DarkMode #page-loader {
     background-color: rgba(30, 30, 30, 0.9);
 }
+
